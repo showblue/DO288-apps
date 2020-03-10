@@ -94,9 +94,12 @@ pipeline {
 
         stage('Wait for deployment in DEV env') {
             //Watch deployment until pod is in 'Running' state
+	    steps {
+		echo '### Watch deployment until pod is in running state###'
 		sh '''
 			echo hello world
 		'''
+	    }
         }
 
         stage('Promote to Staging Env') {
