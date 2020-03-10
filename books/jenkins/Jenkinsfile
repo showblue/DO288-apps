@@ -130,6 +130,7 @@ pipeline {
 			oc project ${STAGE_PROJECT}
 			oc new-app --name ${APP_NAME} -i books:stage
 			oc expose svc/${APP_NAME}
+			sleep 5
 		'''
             }
         }
