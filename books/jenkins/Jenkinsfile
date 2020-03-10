@@ -129,7 +129,7 @@ pipeline {
 		sh '''
 			oc project ${STAGE_PROJECT}
 			oc new-app --name ${APP_NAME} -i books:stage
-			oc expose ${APP_NAME}
+			oc expose svc/${APP_NAME}
 		'''
             }
         }
